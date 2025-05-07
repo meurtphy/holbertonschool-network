@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# 👆 Indique que ce script doit être exécuté avec bash
+
+# 🔐 Utilise "sudo" car il faut les droits administrateur pour voir tous les ports/processeurs
+# 📦 "ss" est un outil pour voir les connexions réseau, comme "netstat" mais plus moderne
+
+# 📡 Affiche tous les ports TCP et UDP en mode écoute + PID/nom du programme
+sudo ss -tulnp
