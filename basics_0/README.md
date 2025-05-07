@@ -5,4 +5,5 @@ IP	C’est qui ?	Pourquoi c’est cool
 192.168.1.1	Ta box Internet (souvent)	Voir si ta box répond
 127.0.0.1	Ton propre ordi (localhost)	Pour tester "toi-même"
 10.0.0.1	Autre IP de box / réseaux pro	Parfois utilisée chez les FAI
-google.com	Nom de domaine (DNS)	Teste si DNS fonctionne 12
+
+google.com	Nom de domaine (DNS)	Teste si DNS fonctionne 123456
