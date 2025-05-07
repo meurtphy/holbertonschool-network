@@ -2,4 +2,5 @@
 # Script that displays listening ports
 # Shows only listening sockets
 # Shows PID and name of the program to which each socket belongs
+
 netstat -lp
