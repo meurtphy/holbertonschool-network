@@ -1,18 +1,14 @@
 #!/usr/bin/env bash
 # Vérifie que le script est exécuté en tant que root
 
-if [ "$(id -u)" -ne 0 ]; then
-    echo "Ce script doit être exécuté avec sudo ou en tant que root."
-    exit 1
-fi
-
 # Sauvegarde du fichier hosts actuel
 cp /etc/hosts /etc/hosts.bak
 
+grep -v -E 'localhost|facebook.com' /etc/hosts.bak > /etc/hosts
 # Supprime les lignes existantes pour localhost et facebook.com (si elles existent)
-sed -i '/localhost/d' /etc/hosts
-sed -i '/facebook.com/d' /etc/hosts
+echo -e "127.0.0.2\tlocalhost" >> /etc/hosts
+echo -e "8.8.8.8\tfacebook.com" >> /etc/hosts
 
 # Ajoute les nouvelles lignes
-echo "127.0.0.2   localhost" >> /etc/hosts
-echo "8.8.8.8     facebook.com" >> /etc/hosts
+echo "Update /etc/hosts"
+cat /etc/hosts
